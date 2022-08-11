@@ -94,7 +94,7 @@
 <meta property="og:image" content="http://yoursite.com/img/iOS/homevc.jpeg">
 <meta property="og:image" content="http://yoursite.com/img/iOS/modularization.gif">
 <meta property="og:image" content="http://yoursite.com/img/iOS/WechatIMG15.jpeg">
-<meta property="og:updated_time" content="2022-08-11T05:15:16.007Z">
+<meta property="og:updated_time" content="2022-08-11T05:47:21.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS主题组件化框架塔建">
 <meta name="twitter:description" content="前言hello 这是我写的一个组件化架构，里面包含了主题化，react-navite组件等。我将讲解下我的构造思想，可以加我微信交流下，也可以加微信批评我~。 组件化构造 如图：我们的宿主App只和Main入口组件打交道，和中间件签订协议（其目的是帮助业务组件去执行任务，例如切换跟视图、推送业务等）。123456主题组件中写好了主题相关的方法颜色值等配置，和baseVC也放在主题里面，业务组件需要">
@@ -315,9 +315,10 @@
 <p>如图：主工程实际像是一个壳子，只负责运行，我们的本地组件都放到了Development Pods中，第三方组件和react navite组件则在Pods中。每一个组件安装依赖后都能可以单独运行编译，很大的方便了团队开发。</p>
 <h3 id="业务组件的实现规范"><a href="#业务组件的实现规范" class="headerlink" title="业务组件的实现规范"></a>业务组件的实现规范</h3><p>业务组件我比较习惯用MVVM的方式来实现，让VM管家去协调工作，VM拿到model，请求到数据后，将数据存起来。控制器注册管家的事件回调，来监听管家处理的任务执行情况，为此做出相应的处理。View和model都不会和控制器到交道，控制器只负责调用事件，处理事件。</p>
 <p>示例：我的架构demo里面的home组件<br><img src="/img/iOS/homevm.jpeg" alt="podfile"><br><img src="/img/iOS/homevc.jpeg" alt="podfile"></p>
-<h3 id="demo的效果图"><a href="#demo的效果图" class="headerlink" title="demo的效果图"></a>demo的效果图</h3><p><img src="/img/iOS/modularization.gif" alt="podfile"></p>
+<h3 id="demo的效果图"><a href="#demo的效果图" class="headerlink" title="demo的效果图"></a>demo的效果图</h3><!-- ![podfile](/img/iOS/modularization.gif) -->
+<p><img src="/img/iOS/modularization.gif" width="375px"></p>
 <h3 id="demo地址"><a href="#demo地址" class="headerlink" title="demo地址"></a>demo地址</h3><p>github地址：<a href="https://github.com/zezeyu/SmartServiceCloud" target="_blank" rel="noopener">https://github.com/zezeyu/SmartServiceCloud</a></p>
-<h3 id="微信名片"><a href="#微信名片" class="headerlink" title="微信名片"></a>微信名片</h3><p><img src="/img/iOS/WechatIMG15.jpeg" alt="podfile"></p>
+<h3 id="微信名片"><a href="#微信名片" class="headerlink" title="微信名片"></a>微信名片</h3><p><img src="/img/iOS/WechatIMG15.jpeg" width="200px"><br><!-- ![podfile](/img/iOS/WechatIMG15.jpeg) --></p>
 
       
     </div>
